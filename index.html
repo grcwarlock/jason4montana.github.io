@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jason for Montana House District 37</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #F5F2ED; --ink: #0F0E0C; --ink-light: #4A4742;
+      --red: #8C1F28; --rule: #C8C4BC;
+      --mono: 'IBM Plex Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; color-scheme: only light; background: #F5F2ED !important; }
+    body {
+      background: #F5F2ED !important; color: #0F0E0C !important;
+      font-family: var(--mono); font-weight: 300; font-size: 16px;
+      line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: #F5F2ED; border-bottom: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 54px;
+    }
+    .nav-id {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+    }
+    .nav-id span { color: var(--red); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav a.nav-link {
+      font-size: 0.68rem; font-weight: 400; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--ink-light);
+      text-decoration: none; transition: color 0.15s;
+    }
+    nav a.nav-link:hover { color: var(--red); }
+    .hero { padding: 11rem 2.5rem 6rem; max-width: 960px; margin: 0 auto; }
+    .hero-eyebrow {
+      font-size: 0.66rem; font-weight: 500; letter-spacing: 0.13em;
+      text-transform: uppercase; color: var(--ink-light); margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.8rem); font-weight: 600;
+      line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 0.3rem;
+    }
+    .hero-line2 {
+      font-size: clamp(2.6rem, 5.5vw, 4.8rem); font-weight: 300; font-style: italic;
+      line-height: 1.06; letter-spacing: -0.02em; color: var(--red); margin-bottom: 2.5rem;
+    }
+    .tagline {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;
+    }
+    .tagline::before { content: ''; display: block; width: 32px; height: 1px; background: var(--red); }
+    .hero-body {
+      font-size: 0.97rem; font-weight: 300; line-height: 1.88;
+      color: var(--ink-light); max-width: 620px; margin-bottom: 3rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--ink); color: var(--bg); border: none;
+      padding: 0.9rem 2rem; cursor: pointer; text-decoration: none;
+      transition: background 0.15s; display: inline-block;
+    }
+    .btn-primary:hover { background: var(--red); }
+    .btn-outline {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+      background: transparent; color: var(--ink); border: 1px solid var(--ink);
+      padding: 0.9rem 2rem; cursor: pointer; text-decoration: none;
+      transition: border-color 0.15s, color 0.15s; display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--red); color: var(--red); }
+    hr.rule { border: none; border-top: 1px solid var(--rule); }
+    .ruled { max-width: 960px; margin: 0 auto; }
+    .cards-section {
+      max-width: 960px; margin: 0 auto; padding: 5rem 2.5rem;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+    }
+    .card { padding: 2.5rem 2rem; border-right: 1px solid var(--rule); }
+    .card:first-child { padding-left: 0; }
+    .card:last-child { border-right: none; }
+    .card-num {
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--red); margin-bottom: 1.25rem;
+    }
+    .card h3 { font-size: 1.0rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.9rem; }
+    .card p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.75; margin-bottom: 1.5rem; }
+    .card a.card-link {
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+      border-bottom: 1px solid var(--ink); padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .card a.card-link:hover { color: var(--red); border-color: var(--red); }
+    .news-section { max-width: 960px; margin: 0 auto; padding: 5rem 2.5rem; }
+    .section-label {
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--red); display: block; margin-bottom: 2.5rem;
+    }
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .news-item a { text-decoration: none; color: inherit; display: block; }
+    .news-date {
+      font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ink-light); margin-bottom: 0.6rem;
+    }
+    .news-item h4 { font-size: 0.95rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.6rem; transition: color 0.15s; }
+    .news-item:hover h4 { color: var(--red); }
+    .news-item p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.7; }
+    footer {
+      border-top: 1px solid var(--rule); padding: 2rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 960px; margin: 0 auto;
+    }
+    footer p { font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-light); }
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    @media (max-width: 700px) {
+      nav ul { display: none; }
+      .cards-section { grid-template-columns: 1fr; }
+      .card { border-right: none; border-bottom: 1px solid var(--rule); padding: 2rem 0; }
+      .card:last-child { border-bottom: none; }
+      .news-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-id">Jason <span>·</span> HD-37</a>
+  <ul>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+    <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+    <li><a href="news.html" class="nav-link">News</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">Montana House District 37 &nbsp;·&nbsp; Independent Candidate &nbsp;·&nbsp; 2026</p>
+  <h1>The world got plenty of my time.</h1>
+  <p class="hero-line2">Central Montana gets the rest of it.</p>
+  <div class="tagline">No party. Just solutions.</div>
+  <p class="hero-body">Growing up a military kid means a new base every three years, a new school, new faces to figure out. My grandmother's house on West Boulevard in Lewistown was the one address that never changed, and summers here were what home actually felt like. A lot of world came after those childhood, teenage, and young adult summers. Securing this country as an intelligence officer at the Defense Intelligence Agency, and later at the Pentagon during the Global War on Terror, took me about as far from West Boulevard as a person can get. Work in cybersecurity and data privacy followed, spanning public sector and private sector both, and across all of it the same skill kept showing up: knowing how to find what is actually true underneath the version someone is selling you. Bringing that home to the only place that was ever really mine felt less like a decision and more like the obvious next thing. Running as an independent means my obligation runs in one direction only, to the residents of District 37.</p>
+  <div class="hero-actions">
+    <a href="solutions.html" class="btn-primary">See the Solutions</a>
+    <a href="about.html" class="btn-outline">About Jason</a>
+  </div>
+</div>
+
+<hr class="rule"><div class="ruled"></div>
+
+<div class="cards-section fade-in">
+  <div class="card">
+    <div class="card-num">Who I Am</div>
+    <h3>Intelligence officer. Four generations of Central Montana. No party obligations.</h3>
+    <p>From the DIA and the Pentagon to the only hometown I ever had. That combination gives me a particular way of seeing what is actually heading toward this region right now.</p>
+    <a href="about.html" class="card-link">Read the full story &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="card-num">The Platform</div>
+    <h3>Five issues. Real positions. No consultant language.</h3>
+    <p>Data centers, housing affordability, Montana producers, rural economic development, and working Montanans. Every position on this site is something I will say to your face at a kitchen table.</p>
+    <a href="solutions.html" class="card-link">See the solutions &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="card-num">Get Involved</div>
+    <h3>This campaign runs on neighbors, not party infrastructure.</h3>
+    <p>Volunteer, request a yard sign, host a neighborhood conversation. In a district this size, a real conversation with someone you already know beats any ad buy, every time.</p>
+    <a href="get-involved.html" class="card-link">Join the effort &rarr;</a>
+  </div>
+</div>
+
+<hr class="rule"><div class="ruled"></div>
+
+<div class="news-section fade-in">
+  <span class="section-label">Latest</span>
+  <div class="news-grid">
+    <div class="news-item">
+      <a href="news.html">
+        <div class="news-date">February 2026</div>
+        <h4>Montana's Ranchers Are Feeding the Country. Someone Else Is Cashing the Check.</h4>
+        <p>Keeping the money in Montana means selling the steak, not just the steer. Here is how direct-to-consumer and the Made in Montana label change that math.</p>
+      </a>
+    </div>
+    <div class="news-item">
+      <a href="news.html">
+        <div class="news-date">February 2026</div>
+        <h4>What the Data Center Bills Actually Say</h4>
+        <p>The legislation moving through Helena looks like economic development. Reading the full text is a different experience.</p>
+      </a>
+    </div>
+    <div class="news-item">
+      <a href="news.html">
+        <div class="news-date">January 2026</div>
+        <h4>Why I'm Running Independent in a Three-Way Race</h4>
+        <p>Two party candidates, one district, and a straightforward question about who a representative actually works for.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr class="rule" style="max-width:960px;margin:0 auto;">
+<footer>
+  <p>Paid for by Jason for Montana HD-37 &mdash; Independent</p>
+  <p>Lewistown, MT &nbsp;·&nbsp; 2026</p>
+</footer>
+<script>
+  const obs = new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('visible'),i*100);obs.unobserve(en.target);}});},{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
