@@ -584,6 +584,10 @@ article .lede {
   line-height: 1.88; margin-bottom: 1.4rem; font-size: 0.97rem;
 }
 .body p:last-child { margin-bottom: 0; }
+.article-link {
+  color: inherit; text-decoration: none; transition: color 0.2s;
+}
+.article-link:hover { color: var(--camas-500); }
 
 
 /* ============================================
