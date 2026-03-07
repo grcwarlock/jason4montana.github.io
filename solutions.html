@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta property="og:site_name" content="Jason for Montana HD-37"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://jason4montana.com/ltown.jpg"/>
+  <meta property="og:image" content="https://jason4montana.com/img/ltown.jpg"/>
   <meta property="og:image:width" content="1400"/>
   <meta property="og:image:height" content="933"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="https://jason4montana.com/ltown.jpg"/>
+  <meta name="twitter:image" content="https://jason4montana.com/img/ltown.jpg"/>
   <link rel="icon" href="favicon.ico" sizes="32x32"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
   <title>Solutions &mdash; Jason for Montana HD-37</title>
@@ -19,198 +19,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --cream: #F5F2ED;
-      --ink: #0F0E0C;
-      --ink-light: #4A4742;
-      --ink-mid: #2E2D2A;
-      --rule: #C8C4BC;
-      --rule-light: #DBD8D2;
-      --camas-000: #ECF2F8;
-      --camas-100: #D8E5F0;
-      --camas-200: #B1CAE1;
-      --camas-300: #89AFD1;
-      --camas-400: #6294C2;
-      --camas-500: #3A79B2;
-      --camas-600: #2F618F;
-      --camas-700: #29557D;
-      --camas-800: #204362;
-      --gold-300: #F9CA68;
-      --gold-400: #F7B836;
-      --gold-500: #F5A603;
-      --gold-600: #C48503;
-      --mono: 'IBM Plex Mono', monospace;
-      --serif: 'IBM Plex Serif', Georgia, serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; color-scheme: only light; background: var(--cream) !important; }
-    body {
-      background: var(--cream) !important; color: var(--ink) !important;
-      font-family: var(--serif); font-weight: 300; font-size: 17px;
-      line-height: 1.72; -webkit-font-smoothing: antialiased;
-    }
-    body::after {
-      content: ''; position: fixed; inset: 0; z-index: 9999;
-      pointer-events: none; opacity: 0.02;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-repeat: repeat; background-size: 256px 256px;
-    }
-
-    /* Nav */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem; height: 54px;
-      background: rgba(245,242,237,0.92);
-      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(200,196,188,0.45);
-    }
-    .nav-back {
-      font-family: var(--mono);
-      font-size: 0.64rem; font-weight: 400; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--ink-light); text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-back:hover { color: var(--camas-500); }
-    .nav-id {
-      font-family: var(--mono);
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--ink); text-decoration: none;
-    }
-    .nav-id span { color: var(--camas-500); }
-
-    /* Page header on blue */
-    .page-header-band {
-      background: var(--camas-500);
-      padding: 9rem 2.5rem 3.5rem;
-    }
-    .page-header {
-      max-width: 920px; margin: 0 auto;
-    }
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--gold-400); display: block; margin-bottom: 1.5rem;
-    }
-    h1 {
-      font-family: var(--mono);
-      font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 700;
-      line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem;
-      color: #fff;
-    }
-    .page-intro {
-      font-family: var(--serif);
-      font-size: 1rem; font-weight: 300; line-height: 1.82;
-      color: var(--camas-100); max-width: 640px;
-    }
-
-    /* Issue nav */
-    .issue-nav {
-      max-width: 920px; margin: 0 auto; padding: 1.75rem 2.5rem;
-      display: flex; gap: 2rem; flex-wrap: wrap;
-      border-bottom: 1px solid var(--rule);
-      background: var(--cream);
-    }
-    .issue-nav a {
-      font-family: var(--mono);
-      font-size: 0.6rem; font-weight: 500; letter-spacing: 0.09em;
-      text-transform: uppercase; color: var(--ink-light); text-decoration: none;
-      transition: color 0.2s;
-    }
-    .issue-nav a:hover { color: var(--camas-500); }
-
-    /* Issues */
-    .issues { max-width: 920px; margin: 0 auto; }
-    .issue {
-      padding: 4rem 2.5rem; border-bottom: 1px solid var(--rule);
-      display: grid; grid-template-columns: 200px 1fr; gap: 3rem; align-items: start;
-    }
-    .issue:nth-child(even) { background: var(--camas-000); }
-    .issue-meta { position: sticky; top: 80px; }
-    .issue-num {
-      font-family: var(--mono);
-      font-size: 0.58rem; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--gold-500); margin-bottom: 0.75rem;
-    }
-    .issue-tag {
-      font-family: var(--mono);
-      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--ink); line-height: 1.5;
-    }
-    .issue-content h2 {
-      font-family: var(--mono);
-      font-size: 1.2rem; font-weight: 600; line-height: 1.3;
-      letter-spacing: -0.01em; margin-bottom: 1.5rem;
-    }
-    .issue-content p {
-      font-family: var(--serif);
-      color: var(--ink-mid); font-weight: 400; line-height: 1.88; margin-bottom: 1.3rem; font-size: 0.97rem;
-    }
-    .issue-content p:last-child { margin-bottom: 0; }
-    .pull { border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; }
-    .pull p {
-      font-family: var(--serif);
-      font-style: italic; font-size: 1.0rem; font-weight: 300;
-      color: var(--ink); line-height: 1.72; margin-bottom: 0;
-    }
-
-    /* CTA */
-    .cta-band {
-      background: var(--camas-700);
-      padding: 3.5rem 2.5rem; text-align: center;
-    }
-    .cta-band h3 {
-      font-family: var(--mono);
-      font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;
-    }
-    .cta-band p {
-      font-family: var(--serif);
-      font-size: 0.92rem; color: var(--camas-200);
-      margin-bottom: 1.75rem; max-width: 440px;
-      margin-left: auto; margin-right: auto; line-height: 1.7;
-    }
-    .btn-cta {
-      font-family: var(--mono);
-      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--gold-500); color: #fff; border: none;
-      padding: 0.95rem 2.2rem; cursor: pointer; text-decoration: none;
-      display: inline-block; transition: background 0.2s;
-    }
-    .btn-cta:hover { background: var(--gold-400); }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--rule); padding: 2.5rem 2.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-      max-width: 920px; margin: 0 auto;
-    }
-    footer p {
-      font-family: var(--mono);
-      font-size: 0.56rem; letter-spacing: 0.07em;
-      text-transform: uppercase; color: var(--ink-light);
-    }
-
-    .reveal {
-      opacity: 0; transform: translateY(18px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    @media (max-width: 680px) {
-      .issue { grid-template-columns: 1fr; gap: 1rem; padding: 3rem 2rem; }
-      .issue-meta { position: static; }
-      .issue-nav { padding: 1.25rem 2rem; gap: 1rem; }
-      .page-header-band { padding: 7rem 2rem 3rem; }
-      footer {
-        flex-direction: column; gap: 0.5rem; text-align: center;
-        padding-left: 2rem; padding-right: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="nav-back">&larr; Home</a>
   <a href="index.html" class="nav-id">Jason <span>&middot;</span> HD-37</a>
@@ -225,50 +37,34 @@
 </div>
 
 <div class="issue-nav">
-  <a href="#data-centers">Data Centers</a>
-  <a href="#housing">Housing</a>
-  <a href="#producers">Producers</a>
-  <a href="#rural-economy">Rural Economy</a>
   <a href="#working-montanans">Working Montanans</a>
+  <a href="#producers">Producers</a>
+  <a href="#housing">Housing</a>
+  <a href="#rural-economy">Rural Economy</a>
+  <a href="#data-centers">Data Centers</a>
 </div>
 
 <div class="issues">
 
-  <div class="issue reveal" id="data-centers">
+  <div class="issue reveal" id="working-montanans">
     <div class="issue-meta">
       <div class="issue-num">01</div>
-      <div class="issue-tag">Data Centers &amp;<br>Tech Infrastructure</div>
+      <div class="issue-tag">Working<br>Montanans</div>
     </div>
     <div class="issue-content">
-      <h2>Montana's infrastructure should serve Montanans first.</h2>
-      <p>Large-scale data center developments are moving through the legislature with minimal public scrutiny and substantial public subsidy. Facilities of this size consume enormous amounts of water and electricity, generate relatively few local jobs for the footprint they require, and lock communities into long-term infrastructure obligations that outlast the political moment that created them. Reading the actual bills, rather than the summaries prepared by the people who want them to pass, tells a meaningfully different story than the press releases do.</p>
-      <p>Central Montana sits in a region where water is not an abundant resource and where rural power reliability matters to everyone who lives here year-round. Committing meaningful portions of that capacity to serve outside interests is a decision that demands an honest accounting before any vote. Tax incentive structures being written right now carry limited clawback provisions; a project that fails to deliver on its promised employment figures faces minimal financial consequence, and that risk lands on the public, not the developer.</p>
+      <h2>Policy should make daily life more manageable, not more complicated.</h2>
+      <p>Wages have not kept pace with the cost of living in most of Montana, and the legislature has consistently prioritized corporate tax environments over the conditions that let working families stay stable. Healthcare access in rural communities, childcare availability, and basic housing affordability all deserve direct legislative attention. The market-will-sort-it-out answer has been the standing answer in this district for a long time; the results are visible to anyone paying attention.</p>
+      <p>Working Montanans are not asking for complicated policy architecture. They are asking whether their wages cover their rent, whether there is a doctor within a reasonable drive, and whether childcare costs less than a second job would bring in. Solvable problems, all of them, provided the legislature treats them as priorities rather than talking points deployed before primaries and forgotten about afterward.</p>
       <div class="pull">
-        <p>Any project of this scale should require full public disclosure before approval, a genuine accounting of water and grid impacts, and local hiring provisions with real enforcement. "Economic development" is not a blank check, and proximity to a ribbon-cutting photo does not make something good for the people who were already here.</p>
+        <p>Pragmatic representation means asking what works, what can pass, and what actually reaches the people it is intended to help. Ideological purity on either side of these questions has not produced results in this district. Something more direct is long overdue.</p>
       </div>
-      <p>Spending years as an intelligence officer, where the gap between what an agreement says on paper and what it actually commits to is a professional concern, gives me a particular orientation toward documents like these. Bringing that reading to the legislative process is a specific thing this candidacy offers that neither party candidate can match.</p>
-    </div>
-  </div>
-
-  <div class="issue reveal" id="housing">
-    <div class="issue-meta">
-      <div class="issue-num">02</div>
-      <div class="issue-tag">Housing<br>Affordability</div>
-    </div>
-    <div class="issue-content">
-      <h2>Working people should be able to afford to live where they work.</h2>
-      <p>Housing costs across Montana have climbed sharply over the past several years, driven by outside investment, limited inventory, and a construction market that responds to demand at the higher end of the price range long before it touches the working end. For people who grew up here, work here, and want to stay here, the gap between wages and what a decent house actually costs has become a real and practical barrier. Not a talking point; a lived condition that shows up in who leaves and who stays.</p>
-      <p>Rural communities face a version of this problem distinct from what is playing out in Missoula or Bozeman. Stagnant wage growth relative to a housing stock that has not meaningfully expanded in decades is the driver here, and modest-income families, teachers, medical workers, and tradespeople are getting priced out quietly, one lease renewal at a time. The people who keep this community functioning deserve to afford a home in it.</p>
-      <div class="pull">
-        <p>Workforce housing investment, zoning reform that actually enables construction of modest homes, and policies that prioritize long-term residents over short-term investment returns are the real levers available in Helena. Using them requires treating housing affordability as an economic necessity rather than a social program.</p>
-      </div>
-      <p>Local communities should still shape how they grow, and residents deserve genuine authority over what gets built in their neighborhoods. The state's role is to set conditions that make affordable housing easier to build and harder to speculate away. Right now it largely does neither, and that is a policy choice, not an inevitability.</p>
+      <p>The nurses at the hospital, the teachers in the schools, the mechanics, the tradespeople, the people running businesses on Main Street; these are the people this campaign is built for, not an abstract version of their interests. Showing up for them specifically is the job.</p>
     </div>
   </div>
 
   <div class="issue reveal" id="producers">
     <div class="issue-meta">
-      <div class="issue-num">03</div>
+      <div class="issue-num">02</div>
       <div class="issue-tag">Montana<br>Producers</div>
     </div>
     <div class="issue-content">
@@ -279,6 +75,22 @@
         <p>Montana produces things people will pay a premium for, specifically because they come from here and because knowing who made them matters. Unlocking that value means removing the regulatory barriers that make direct-to-consumer shipping difficult for small and mid-size producers, strengthening the Made in Montana label as a genuine quality signal, and putting real legislative support behind keeping multi-generational farm and ranch families on their land.</p>
       </div>
       <p>Supporting the Made in Montana program means more than a logo. Building traceability into the supply chain, supporting small-scale USDA-inspected processing infrastructure in rural Montana, and making it possible for a family operation to reach customers anywhere in the country without surrendering most of the value to a middleman all belong in the same conversation. So does succession planning, because losing a multi-generational ranch is not a market transaction. The land endures; the families who know it and love it are considerably harder to replace.</p>
+    </div>
+  </div>
+
+  <div class="issue reveal" id="housing">
+    <div class="issue-meta">
+      <div class="issue-num">03</div>
+      <div class="issue-tag">Housing<br>Affordability</div>
+    </div>
+    <div class="issue-content">
+      <h2>Working people should be able to afford to live where they work.</h2>
+      <p>Housing costs across Montana have climbed sharply over the past several years, driven by outside investment, limited inventory, and a construction market that responds to demand at the higher end of the price range long before it touches the working end. For people who grew up here, work here, and want to stay here, the gap between wages and what a decent house actually costs has become a real and practical barrier. Not a talking point; a lived condition that shows up in who leaves and who stays.</p>
+      <p>Rural communities face a version of this problem distinct from what is playing out in Missoula or Bozeman. Stagnant wage growth relative to a housing stock that has not meaningfully expanded in decades is the driver here, and modest-income families, teachers, medical workers, and tradespeople are getting priced out quietly, one lease renewal at a time. The people who keep this community functioning deserve to afford a home in it.</p>
+      <div class="pull">
+        <p>Workforce housing investment, zoning reform that actually enables construction of modest homes, and policies that prioritize long-term residents over short-term investment returns are the real levers available in Helena. Using them requires treating housing affordability as an economic necessity rather than a social program.</p>
+      </div>
+      <p>Local communities should still shape how they grow, and residents deserve genuine authority over what gets built in their neighborhoods. The state's role is to set conditions that make affordable housing easier to build and harder to speculate away. Right now it largely does neither, and that is a policy choice, not an inevitability.</p>
     </div>
   </div>
 
@@ -298,36 +110,35 @@
     </div>
   </div>
 
-  <div class="issue reveal" id="working-montanans">
+  <div class="issue reveal" id="data-centers">
     <div class="issue-meta">
       <div class="issue-num">05</div>
-      <div class="issue-tag">Working<br>Montanans</div>
+      <div class="issue-tag">Data Centers &amp;<br>Tech Infrastructure</div>
     </div>
     <div class="issue-content">
-      <h2>Policy should make daily life more manageable, not more complicated.</h2>
-      <p>Wages have not kept pace with the cost of living in most of Montana, and the legislature has consistently prioritized corporate tax environments over the conditions that let working families stay stable. Healthcare access in rural communities, childcare availability, and basic housing affordability all deserve direct legislative attention. The market-will-sort-it-out answer has been the standing answer in this district for a long time; the results are visible to anyone paying attention.</p>
-      <p>Working Montanans are not asking for complicated policy architecture. They are asking whether their wages cover their rent, whether there is a doctor within a reasonable drive, and whether childcare costs less than a second job would bring in. Solvable problems, all of them, provided the legislature treats them as priorities rather than talking points deployed before primaries and forgotten about afterward.</p>
+      <h2>Montana's infrastructure should serve Montanans first.</h2>
+      <p>Large-scale data center developments are moving through the legislature with minimal public scrutiny and substantial public subsidy. Facilities of this size consume enormous amounts of water and electricity, generate relatively few local jobs for the footprint they require, and lock communities into long-term infrastructure obligations that outlast the political moment that created them. Reading the actual bills, rather than the summaries prepared by the people who want them to pass, tells a meaningfully different story than the press releases do.</p>
+      <p>Central Montana sits in a region where water is not an abundant resource and where rural power reliability matters to everyone who lives here year-round. Committing meaningful portions of that capacity to serve outside interests is a decision that demands an honest accounting before any vote. Tax incentive structures being written right now carry limited clawback provisions; a project that fails to deliver on its promised employment figures faces minimal financial consequence, and that risk lands on the public, not the developer.</p>
       <div class="pull">
-        <p>Pragmatic representation means asking what works, what can pass, and what actually reaches the people it is intended to help. Ideological purity on either side of these questions has not produced results in this district. Something more direct is long overdue.</p>
+        <p>Any project of this scale should require full public disclosure before approval, a genuine accounting of water and grid impacts, and local hiring provisions with real enforcement. "Economic development" is not a blank check, and proximity to a ribbon-cutting photo does not make something good for the people who were already here.</p>
       </div>
-      <p>The nurses at the hospital, the teachers in the schools, the mechanics, the tradespeople, the people running businesses on Main Street; these are the people this campaign is built for, not an abstract version of their interests. Showing up for them specifically is the job.</p>
+      <p>Spending years as an intelligence officer, where the gap between what an agreement says on paper and what it actually commits to is a professional concern, gives me a particular orientation toward documents like these. Bringing that reading to the legislative process is a specific thing this candidacy offers that neither party candidate can match.</p>
     </div>
   </div>
 
 </div>
 
 <footer>
-  <p>Paid for by Jason for Montana HD-37 &mdash; Independent</p>
-  <p>Lewistown, MT &nbsp;&middot;&nbsp; 2026</p>
+  <div>
+    <p>Paid for by Jason for Montana HD-37 &mdash; Independent</p>
+    <p>Lewistown, MT &nbsp;&middot;&nbsp; 2026</p>
+  </div>
+  <div class="footer-contact">
+    <p><a href="mailto:jason@jason4montana.com">jason@jason4montana.com</a></p>
+    <p><a href="tel:+14063660318">(406) 366-0318</a></p>
+  </div>
 </footer>
 
-<script>
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
-    });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
