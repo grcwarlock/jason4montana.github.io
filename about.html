@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta property="og:site_name" content="Jason for Montana HD-37"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://jason4montana.com/img/ltown.jpg"/>
+  <meta property="og:image" content="https://jason4montana.com/ltown.jpg"/>
   <meta property="og:image:width" content="1400"/>
   <meta property="og:image:height" content="933"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="https://jason4montana.com/img/ltown.jpg"/>
+  <meta name="twitter:image" content="https://jason4montana.com/ltown.jpg"/>
   <link rel="icon" href="favicon.ico" sizes="32x32"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
   <title>About Jason &mdash; Montana HD-37</title>
@@ -19,17 +19,246 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    :root {
+      --cream: #F5F2ED;
+      --ink: #0F0E0C;
+      --ink-light: #4A4742;
+      --ink-mid: #2E2D2A;
+      --rule: #C8C4BC;
+      --rule-light: #DBD8D2;
+      --camas-000: #ECF2F8;
+      --camas-100: #D8E5F0;
+      --camas-200: #B1CAE1;
+      --camas-300: #89AFD1;
+      --camas-400: #6294C2;
+      --camas-500: #3A79B2;
+      --camas-600: #2F618F;
+      --camas-700: #29557D;
+      --camas-800: #204362;
+      --gold-000: #FEF7E6;
+      --gold-300: #F9CA68;
+      --gold-400: #F7B836;
+      --gold-500: #F5A603;
+      --gold-600: #C48503;
+      --gold-700: #AC7503;
+      --mono: 'IBM Plex Mono', monospace;
+      --serif: 'IBM Plex Serif', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--cream); }
+    body {
+      background: var(--cream); color: var(--ink);
+      font-family: var(--serif); font-weight: 300; font-size: 17px;
+      line-height: 1.72; -webkit-font-smoothing: antialiased;
+    }
+    body::after {
+      content: ''; position: fixed; inset: 0; z-index: 9999;
+      pointer-events: none; opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 256px 256px;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 54px;
+      background: rgba(245,242,237,0.92);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200,196,188,0.45);
+    }
+    .nav-back {
+      font-family: var(--mono);
+      font-size: 0.72rem; font-weight: 400; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--ink-light); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--camas-500); }
+    .nav-id {
+      font-family: var(--mono);
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+    }
+    .nav-id span { color: var(--camas-500); }
+
+    /* Photo hero */
+    .photo-hero {
+      margin-top: 54px; width: 100%;
+      height: clamp(300px, 40vw, 450px);
+      overflow: hidden; position: relative;
+    }
+    .photo-hero img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 60%; display: block;
+    }
+    .photo-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 55%, rgba(15,14,12,0.35) 100%);
+    }
+    .photo-caption {
+      position: absolute; bottom: 1.5rem; left: 2.5rem;
+      font-family: var(--mono);
+      font-size: 0.64rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(245,242,237,0.55);
+    }
+
+    /* Content */
+    .content { max-width: 800px; margin: 0 auto; padding: 5rem 2.5rem; }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--camas-500); display: block; margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: var(--mono);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 2.5rem;
+    }
+    .lede {
+      font-family: var(--serif);
+      font-style: italic; font-size: 1.05rem; font-weight: 300;
+      line-height: 1.78; color: var(--ink-mid); margin-bottom: 3rem;
+      padding-bottom: 3rem; border-bottom: 1px solid var(--rule);
+    }
+    h2 {
+      font-family: var(--mono);
+      font-size: 1.15rem; font-weight: 600; line-height: 1.3;
+      letter-spacing: -0.01em; margin-bottom: 1.25rem; margin-top: 3.5rem;
+      color: var(--ink);
+    }
+    p {
+      font-family: var(--serif);
+      color: var(--ink-mid); font-weight: 400; line-height: 1.88; margin-bottom: 1.4rem; font-size: 0.97rem;
+    }
+    p:last-of-type { margin-bottom: 0; }
+
+    /* Photo inline placeholder */
+    .photo-inline { width: 100%; height: 300px; overflow: hidden; margin: 3rem 0; }
+    .photo-inline svg { width: 100%; height: 100%; }
+    .photo-inline-caption {
+      font-family: var(--mono);
+      font-size: 0.64rem; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--ink-light); margin-top: 0.6rem;
+    }
+
+    /* Pull quote */
+    .pull { border-left: 3px solid var(--gold-500); padding-left: 1.5rem; margin: 2.5rem 0; }
+    .pull p {
+      font-family: var(--serif);
+      font-style: italic; font-size: 1.05rem; font-weight: 300;
+      color: var(--ink); line-height: 1.72; margin-bottom: 0;
+    }
+
+    /* CTA band */
+    .cta-band {
+      background: var(--camas-500);
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+    }
+    .cta-band h3 {
+      font-family: var(--mono);
+      font-size: 1.1rem; font-weight: 600; color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .cta-band p {
+      font-family: var(--serif);
+      font-size: 0.92rem; color: var(--camas-200);
+      margin-bottom: 1.75rem; max-width: 440px;
+      margin-left: auto; margin-right: auto; line-height: 1.7;
+    }
+    .btn-cta {
+      font-family: var(--mono);
+      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--gold-500); color: #fff; border: none;
+      padding: 0.95rem 2.2rem; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: background 0.2s;
+    }
+    .btn-cta:hover { background: var(--gold-400); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--rule); padding: 2.5rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 800px; margin: 0 auto;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.66rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--ink-light);
+    }
+
+    /* Animations */
+    .reveal {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 700px) {
+      .content { padding: 3.5rem 2rem; }
+      footer {
+        flex-direction: column; gap: 0.5rem; text-align: center;
+        padding-left: 2rem; padding-right: 2rem;
+      }
+    }
+
+
+    .footer-contact { text-align: right; }
+    .footer-contact p { margin: 0; }
+    .footer-contact a {
+      font-family: var(--mono);
+      font-size: 0.66rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--camas-500);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--gold-500); }
+    /* ── DARK MODE ── */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --cream: #1B1A18;
+        --ink: #E8E5E0;
+        --ink-light: #A09D98;
+        --ink-mid: #C8C5C0;
+        --rule: #2E2D2B;
+        --rule-light: #252422;
+        --camas-000: #1E2228;
+        --camas-100: #222830;
+      }
+      html, body { background: #1B1A18; color: #E8E5E0; }
+      nav {
+        background: rgba(27, 26, 24, 0.92);
+        border-bottom-color: rgba(46, 45, 43, 0.6);
+      }
+      .mobile-menu { background: #1B1A18; border-bottom-color: #2E2D2B; }
+      body::after { opacity: 0.015; }
+      .cards-band { background: var(--camas-800); }
+      .accent-band { background: var(--gold-600); }
+      .accent-band p { color: #fff; }
+      .news-band { background: var(--camas-000); }
+      .news-item a { background: #222120; border-color: #2E2D2B; }
+      .news-item a:hover { background: #282725; border-color: #3A3938; }
+      .photo-overlay { background: linear-gradient(to bottom, transparent 55%, rgba(15,14,12,0.55) 100%); }
+      img { opacity: 0.92; }
+      input, textarea, select { background: #222120; border-color: #3A3938; color: var(--ink); }
+      .form-success { background: #1E2228; border-color: var(--camas-700); }
+      .issue:nth-child(even) { background: var(--camas-000); }
+      article:nth-child(even) { background: var(--camas-000); }
+      .page-header { border-bottom-color: #2E2D2B; }
+      .footer-contact a { color: var(--camas-400); }
+    }
+
+  </style>
 </head>
 <body>
-
 <nav>
   <a href="index.html" class="nav-back">&larr; Home</a>
   <a href="index.html" class="nav-id">Jason <span>&middot;</span> HD-37</a>
 </nav>
 
 <div class="photo-hero">
-  <img src="img/ltown.jpg" alt="Lewistown, Montana"/>
+  <img src="ltown.jpg" alt="Lewistown, Montana"/>
   <div class="photo-overlay"></div>
   <div class="photo-caption">Lewistown, Montana &nbsp;&middot;&nbsp; Fergus County</div>
 </div>
@@ -71,6 +300,9 @@
   </div>
 </div>
 
+
+
+<hr style="border:none;border-top:1px solid var(--rule);max-width:800px;margin:0 auto;">
 <footer>
   <div>
     <p>Paid for by Jason for Montana HD-37 &mdash; Independent</p>
@@ -82,6 +314,13 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
